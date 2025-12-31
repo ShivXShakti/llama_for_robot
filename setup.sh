@@ -25,6 +25,12 @@ echo "testing build: usage: ./build/bin/llama-cli [options]"
 
 echo "Installing llama-cpp-python"
 cd ../
+git clone --recurse-submodules https://github.com/abetlen/llama-cpp-python.git
+cd llama-cpp-python
+CMAKE_ARGS="-DGGML_CUDA=ON" pip install -e .
+cd ../
+mkdir -p ~/Documents/urs_ws/llama_ws/models/llama3
+cd models/llama3
 
 
 echo "Installation complete!"
