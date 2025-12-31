@@ -4,7 +4,9 @@ echo "Updating system..."
 sudo apt update
 
 echo "Installing required packages..."
-sudo apt install -y build-essential cmake git python3 python3-pip ninja
+sudo apt install -y build-essential cmake git python3 python3-pip ninja-build
+
+sudo apt install -y htop wget curl unzip
 
 echo "Creating python virtual environment..."
 mkdir -p ~/Documents/urs_ws/llama_ws
