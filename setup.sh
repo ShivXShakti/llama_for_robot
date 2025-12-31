@@ -17,6 +17,7 @@ source llama/bin/activate
 echo "Clonning llama-cpp..."
 git clone https://github.com/ggerganov/llama.cpp.git
 cd llama.cpp
+
 echo "Building llama-cpp..."
 cmake -B build -DGGML_CUDA=ON
 cmake --build build -j$(nproc)
