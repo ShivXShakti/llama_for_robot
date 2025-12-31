@@ -11,6 +11,7 @@ sudo apt install -y htop wget curl unzip
 echo "Creating python virtual environment..."
 mkdir -p ~/Documents/urs_ws/llama_ws
 cd ~/Documents/urs_ws/llama_ws
+apt install python3.10-venv
 python3 -m venv llama
 source llama/bin/activate
 
@@ -21,6 +22,10 @@ cmake --build build -j$(nproc)
 
 echo "testing build: usage: ./build/bin/llama-cli [options]"
 ./build/bin/llama-cli -h
+
+echo "Installing llama-cpp-python"
+cd ../
+
 
 echo "Installation complete!"
 
