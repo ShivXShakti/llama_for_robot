@@ -1,5 +1,5 @@
 ## LLAMA FOR ROBOTS
-#Run LLaMa Server
+# Run LLaMa Server
 python3 server.py
-#Run LLaMa Client
+# Run LLaMa Client
 python3 client.py
